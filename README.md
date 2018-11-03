@@ -1,4 +1,4 @@
-# Udacity Blockchain Project 2
+# Udacity Blockchain Project 3
 
 Build an API to get block info.
 
@@ -20,21 +20,21 @@ A step by step series of examples that tell you how to get a development env run
 
 1.
 
-```
+```bash
 yarn
-
-// or
-
+```
+or 
+```bash
 npm install
 ```
 
 And repeat
 
-```
+```bash
 yarn start
+```
 
-// or
-
+```bash
 npm start
 ```
 
@@ -46,7 +46,6 @@ Explain how to run the automated tests for this system
 
 ## Built With
 
-* [Blockexplorer](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
 * [ExpressJS](https://maven.apache.org/) - Dependency Management
 * [NodeJS](https://rometools.github.io/rome/) - Used to generate RSS Feeds
 
