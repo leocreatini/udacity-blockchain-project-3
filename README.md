@@ -12,7 +12,7 @@ You will need NodeJS and NPM, you can [download it here](https://nodejs.org/en/d
 
 ```json
 "engines": {
-  "node": "^8"
+  "node": ">8"
 }
 ```
 
@@ -44,7 +44,7 @@ OR
 npm start
 ```
 
-Open browser to http://localhost:8080/block/0 to see the 0th block information. You can then replace the "0" with any other positive integer that's equal or less than the current block height.
+Open browser to http://localhost:8000/block/0 to see the 0th block information. You can then replace the "0" with any other positive integer that's equal or less than the current block height.
 
 ## Testing
 
