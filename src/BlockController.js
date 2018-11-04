@@ -2,7 +2,7 @@ const { Block } = require('./Block');
 const { NO_DATA_PROVIDED } = require('./constants');
 const { createHash } = require('./utils');
 
-// Controller Definition to encapsulate routes to work with blocks
+// Controller to encapsulate routes to work with blocks
 class BlockController {
   constructor(app) {
     this.app = app;
@@ -16,9 +16,11 @@ class BlockController {
   getBlockByIndex() {
     this.app.get('/block/:index', (req, res) => {
       const { index } = req.params;
+      // index is good
       if (this.chain[index]) {
         return res.json({ ...this.chain[index] });
       }
+      // index is junk or missing
       return res.json({
         status: false,
         message: `Error: Blockchain doesn't have a block with height of ${index}.`
@@ -30,6 +32,7 @@ class BlockController {
   postNewBlock() {
     this.app.post('/block', (req, res) => {
       const { data } = req.body;
+      // data is good
       if (data) {
         // create new block
         const block = this.createBlock(data);
@@ -38,12 +41,14 @@ class BlockController {
         // send back new block to requester
         return res.json({ ...block });
       }
-      // when there's an error
+      // when data is junk or missing
       return res.json(NO_DATA_PROVIDED);
     });
   }
 
-  // creates new block, configures it based on the current chain, and then returns it
+  // creates new block
+  // configures it based on the current chain
+  // and then returns the block
   createBlock(data) {
     // make block
     const block = new Block(data);
@@ -65,6 +70,7 @@ class BlockController {
     return block;
   }
 
+  // make genesis block
   initBlockchain() {
     if (this.chain.length === 0) {
       const genesisBlock = this.createBlock('sonic hedgehog sega genesis block');

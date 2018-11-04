@@ -8,4 +8,4 @@ exports.NO_DATA_PROVIDED = {
   message: 'Error: No data provided.',
 };
 
-exports.SERVER_STARTED = port => `Server's doing a barrel-roll on http://localhost:${port}`;
+exports.SERVER_STARTED = "Things are happening on http://localhost:";

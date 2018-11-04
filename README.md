@@ -1,6 +1,6 @@
 # Udacity Blockchain Project 2
 
-Build an API to get block info.
+Build an API to get block info and add a new block to the chain.
 
 ## Getting Started
 
@@ -8,59 +8,56 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+You will need NodeJS and NPM, you can [download it here](https://nodejs.org/en/download/).
 
-```
-nodejs@^10.0.0
+```json
+"engines": {
+  "node": "^8"
+}
 ```
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
+Begin by downloading dependencies and setting up the app with:
 
-1.
-
-```
+```bash
 yarn
+```
 
-// or
+OR
 
+```bash
 npm install
 ```
 
-And repeat
+### Using
 
-```
+To start the server and to be able to interact with the API, run:
+
+```bash
 yarn start
+```
 
-// or
+OR
 
+```bash
 npm start
 ```
 
-Open browser to http://localhost:8080/block/0 to see the 0th block information. You can then replace the "0" with any other positive integer that's equal or less than the current block height (XXXXXXX as of this time).
+Open browser to http://localhost:8080/block/0 to see the 0th block information. You can then replace the "0" with any other positive integer that's equal or less than the current block height.
 
-## Running the tests
+## Testing
 
 Explain how to run the automated tests for this system
 
 ## Built With
 
-* [Blockexplorer](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [ExpressJS](https://maven.apache.org/) - Dependency Management
-* [NodeJS](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Thanks for your consideration but at this time we are not looking for contributions, as this is being graded for my individual contribution, thank you.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+* [ExpressJS](https://github.com/expressjs/express) - NodeJS Framework
+* [NodeJS](https://nodejs.org/en/) - Serverside JavaScript (among other uses)
 
 ## Authors
 
-* **Leo Creatini** - *All work* - [leocreatini](https://github.com/leocreatini)
+* **Leo Creatini** - [leocreatini](https://github.com/leocreatini)
 
 ## License
 
@@ -69,4 +66,3 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ## Acknowledgments
 
 * Udacity
-* Brendan Eich

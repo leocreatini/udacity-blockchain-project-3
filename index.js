@@ -41,7 +41,7 @@ class BlockchainApp {
 
   // start server
   start() {
-    this.app.listen(this.config.port, console.log(SERVER_STARTED(this.config.port)));
+    this.app.listen(this.config.port, console.log(`${SERVER_STARTED}${this.config.port}`));
   }
 }
 

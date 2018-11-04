@@ -1,5 +1,6 @@
 const { getTimestamp } = require('./utils');
 
+// Class for a single block within the blockchain
 class Block {
 	constructor(data) {
 		this.hash = '';
