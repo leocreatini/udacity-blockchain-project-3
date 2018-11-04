@@ -1,4 +1,4 @@
-# Udacity Blockchain Project 2
+# Udacity Blockchain Project 3
 
 Build an API to get block info and add a new block to the chain.
 
