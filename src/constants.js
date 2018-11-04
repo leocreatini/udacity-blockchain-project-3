@@ -1,3 +1,4 @@
+// constants
 exports.BAD_REQUEST = {
   status: false,
   message: 'You may be missing information in your request. Please check your request URL and METHOD, and try again.'
@@ -9,3 +10,5 @@ exports.NO_DATA_PROVIDED = {
 };
 
 exports.SERVER_STARTED = "Things are happening on http://localhost:";
+
+exports.GENESIS_BLOCK_DATA = 'sonic hedgehog sega genesis block';

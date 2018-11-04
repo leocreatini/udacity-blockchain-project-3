@@ -1,5 +1,5 @@
 const { Block } = require('./Block');
-const { NO_DATA_PROVIDED } = require('./constants');
+const { NO_DATA_PROVIDED, GENESIS_BLOCK_DATA } = require('./constants');
 const { createHash } = require('./utils');
 
 // Controller to encapsulate routes to work with blocks
@@ -53,8 +53,8 @@ class BlockController {
     // make block
     const block = new Block(data);
     // set height
-    block.height = this.chain.length;
-    // set previous block hash, if not genesis block
+    block.height = this.chain.length; // length is already height + 1
+    // set previous block hash (if not the genesis block)
     if (this.chain.length > 0) {
       block.previousBlockHash = this.chain[this.chain.length - 1].hash;
     }
@@ -73,7 +73,7 @@ class BlockController {
   // make genesis block
   initBlockchain() {
     if (this.chain.length === 0) {
-      const genesisBlock = this.createBlock('sonic hedgehog sega genesis block');
+      const genesisBlock = this.createBlock(GENESIS_BLOCK_DATA);
       this.addBlock(genesisBlock);
     }
   }
