@@ -68,6 +68,7 @@ All data is in JSON format, and expects body for POST to be in JSON as well.
 
 - [ExpressJS](https://github.com/expressjs/express) - NodeJS Framework
 - [NodeJS](https://nodejs.org/en/) - Serverside JavaScript (among other uses)
+- [CryptoJS](https://github.com/brix/crypto-js) - JavaScript library of cryptography standards
 
 ## Authors
 
